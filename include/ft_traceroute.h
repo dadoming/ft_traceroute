@@ -15,6 +15,7 @@
 #include <netinet/in.h>
 #include <netinet/ip_icmp.h>
 #include <netinet/ip.h>
+#include <netinet/ip6.h>
 #include <arpa/inet.h>
 
 #include "utils.h"
@@ -24,13 +25,22 @@
 
 #define HOP_LIMIT 30
 #define PACKETS_PER_HOP 3
-
+#define PACKET_SIZE 60
 
 // remove this line if it works
 #ifndef NI_MAXHOST
 # define NI_MAXHOST 1025
 #endif
 
+typedef struct s_packet {
+	struct icmphdr header;
+	char data[PACKET_SIZE - sizeof(struct icmphdr)];
+} t_packet;
+
+typedef struct time_miliseconds_decimals {
+	long milliseconds;
+	long microseconds;
+} time_ms;
 
 typedef struct s_tracert {
 	pid_t pid;
