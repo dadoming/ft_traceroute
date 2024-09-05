@@ -1,4 +1,4 @@
-#include "../include/main_header.h"
+#include "../include/ft_traceroute.h"
 
 void exit_program(t_tracert *t, int num) {
 	if (t) {

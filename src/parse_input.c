@@ -1,4 +1,4 @@
-#include "../include/main_header.h"
+#include "../include/ft_traceroute.h"
 
 static void set_destination_address(t_tracert *tracert, char **argv, int argc, int i);
 

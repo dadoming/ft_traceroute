@@ -1,7 +1,7 @@
 NAME = ft_traceroute
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror #-fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror -g #-fsanitize=address
 
 SRC = $(wildcard src/*.c)
 SRC_LIST = $(notdir $(SRC))

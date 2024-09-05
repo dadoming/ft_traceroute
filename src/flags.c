@@ -1,4 +1,4 @@
-#include "../include/main_header.h"
+#include "../include/ft_traceroute.h"
 
 void help_message(char *name, int num) {
 	printf("Usage:\n\
