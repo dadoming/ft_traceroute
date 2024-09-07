@@ -1,5 +1,7 @@
 # ft_traceroute
 
+This project is part of the Network branch of the 42 curriculum.
+
 ## Table of Contents
 - [Description](#description)
 - [Features](#features)
