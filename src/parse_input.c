@@ -60,7 +60,7 @@ void parse_input(int argc, char **argv, t_tracert *tracert) {
 		exit_program(tracert, 1);
 	}
 
-	if (tracert->flags.f.entered && tracert->flags.m.entered && tracert->flags.f.value > DEFAULT_HOP_LIMIT) {
+	if (tracert->flags.f.entered && !tracert->flags.m.entered && tracert->flags.f.value > DEFAULT_HOP_LIMIT) {
 		printf("First TTL value cannot be greater than %d\n", DEFAULT_HOP_LIMIT);
 		exit_program(tracert, 1);
 	}
